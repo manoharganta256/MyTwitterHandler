@@ -1,2 +1,2 @@
-# SimpleRTAppAPI
-Simple application that allows to easily retweet relevant content with Push notifications
+# MyTwitterHandler
+Simple application that allows get all the tweets on a particular hashtag and retweet and like particular tweet
