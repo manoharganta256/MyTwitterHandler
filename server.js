@@ -13,4 +13,8 @@ postedTweetRoutes(app);
 
 app.listen(port);
 
+app.get('/', function(req, res){
+	res.sendFile('/Users/anirudhn/SimpleRTAppAPI/index.html');
+})
+
 console.log('SimpleRTAppAPI server started on: ' + port);
