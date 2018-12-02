@@ -1,10 +1,13 @@
-var express = require('express'),
-  app = express(),
-  port = process.env.PORT || 3000,
-  bodyParser = require('body-parser');
+var express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const bodyParser = require('body-parser');
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/public'));
 
 var tweetRequestRoutes = require('./api/routes/tweetRequestRoutes');
 tweetRequestRoutes(app);
@@ -13,8 +16,8 @@ postedTweetRoutes(app);
 
 app.listen(port);
 
-app.get('/', function(req, res){
-	res.sendFile('/Users/anirudhn/SimpleRTAppAPI/index.html');
-})
+app.get('/', function (req, res) {
+    res.render('index.hbs')
+});
 
 console.log('SimpleRTAppAPI server started on: ' + port);
