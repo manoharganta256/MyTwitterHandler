@@ -1,2 +1,2 @@
 # MyTwitterHandler
-Simple application that allows get all the tweets on a particular hashtag and retweet and like particular tweet
+Search tweets with their hashtags, like or retweet selected tweet.
